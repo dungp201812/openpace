@@ -76,7 +76,7 @@ MAKE_STANDALONE_TOOLCHAIN ?= $${HOME}/.local/opt/android-ndk-r10e/build/tools/ma
 
 android:
 	test -d $(ANDROID_TOOL_DIR) \
-		|| $(MAKE_STANDALONE_TOOLCHAIN) --install-dir=$(ANDROID_TOOL_DIR) --arch=$(ANDROID_ARCH) --platform=android-16
+		|| $(MAKE_STANDALONE_TOOLCHAIN) --install-dir=$(ANDROID_TOOL_DIR) --arch=$(ANDROID_ARCH) --platform=android-21
 	env ac_cv_func_malloc_0_nonnull=yes PATH=$(ANDROID_TOOL_DIR)/bin:$${PATH} $(MAKE) cross \
 		TOOL=$(ANDROID_TOOL) \
 		TOOL_DIR=$(ANDROID_TOOL_DIR) \
